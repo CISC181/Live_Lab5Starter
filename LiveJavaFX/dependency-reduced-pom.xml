@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>cisc.edu</groupId>
-  <artifactId>LiveJavaFX</artifactId>
+  <groupId>org.ud.edu</groupId>
+  <artifactId>LIVEJavaFX</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
     <plugins>
@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>app.Game</mainClass>
+                  <mainClass>application.Scrabble</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -29,7 +29,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <release>16</release>
+          <release>17</release>
         </configuration>
       </plugin>
       <plugin>
@@ -45,9 +45,9 @@
   <properties>
     <hibernate.version>5.0.2.Final</hibernate.version>
     <spring-framework.version>5.1.8.RELEASE</spring-framework.version>
-    <JavaFX.Version>16</JavaFX.Version>
+    <JavaFX.Version>17.0.1</JavaFX.Version>
     <slf4j.version>1.7.12</slf4j.version>
-    <java.version>1.16</java.version>
+    <java.version>1.17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>4.12</junit.version>
     <JavaFX.Platform>win</JavaFX.Platform>
@@ -55,4 +55,3 @@
     <logback.version>1.2.3</logback.version>
   </properties>
 </project>
-t>
