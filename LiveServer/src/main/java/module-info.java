@@ -11,4 +11,8 @@ module LiveServer {
 	requires javafx.media;
 
 	opens app.controller to javafx.fxml;
+	
+	
+	
+	
 }
