@@ -1,4 +1,4 @@
-module ScrabbleJavaFX {
+module LiveJavaFX {
 
 	exports application;
 	exports application.controller;

@@ -1,4 +1,4 @@
-module ScrabbleJabber {
+module LiveJabber {
 	exports netgame.common;
 
 }

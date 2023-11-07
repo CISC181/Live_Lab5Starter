@@ -1,9 +1,9 @@
-module ScrabbleServer {
+module LiveServer {
 	exports app;
 	exports app.hub;
 	
-	requires ScrabbleBLL;
-	requires ScrabbleJabber;
+	requires LiveBLL;
+	requires LiveJabber;
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;

@@ -18,7 +18,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import netgame.common.Client;
 //import pkgGame.Action;
-
+import pkgCore.Action;
 import pkgCore.Player;
 
 public class ServerStart extends Application {

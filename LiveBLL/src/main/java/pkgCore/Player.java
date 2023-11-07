@@ -7,6 +7,8 @@ public class Player {
 	private UUID PlayerID;
 	private String PlayerName;
 	 
+	private int ClientID;
+	
 	public Player(UUID playerID, String playerName) {
 		super();
 		PlayerID = playerID;
@@ -16,6 +18,12 @@ public class Player {
 	public Player(String playerName) {
 		this.PlayerID = UUID.randomUUID();
 		PlayerName = playerName;
+	}
+	
+	public Player(String playerName,  int iClientID) {
+		this.PlayerID = UUID.randomUUID();
+		PlayerName = playerName;
+		this.ClientID = iClientID;
 	}
 
 	public String getPlayerName() {
@@ -30,7 +38,9 @@ public class Player {
 		return PlayerID;
 	}
 	
-	
+	public int getClientID() {
+		return ClientID;
+	}
 	
 	
 }

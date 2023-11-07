@@ -22,6 +22,13 @@ public class GamePlay {
 	private ArrayList<Card> CommonCards = new ArrayList<Card>();
 	private Deck GameDeck;
 
+	
+	public GamePlay(Rule rle) {
+		
+		this.Rle = rle;				
+		GameDeck = new Deck();
+	}
+	
 	/**
 	 * GamePlay - Create an instance of GamePlay. For every player in the table, add
 	 * them to the game Set the GameDeck.
@@ -39,6 +46,11 @@ public class GamePlay {
 		GameDeck = new Deck();
 	}
 
+	
+	public void AddPlayer(Player p)
+	{
+		this.GamePlayers.put(p.getPlayerID(), p);
+	}
 	/**
 	 * Draw - Draw a card from the game's deck and assign it to a given player
 	 * @author BRG

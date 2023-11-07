@@ -34,7 +34,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.0</version>
 				<configuration>
-					<release>16</release>
+					<release>17</release>
 				</configuration>
 			</plugin>
 
@@ -54,7 +54,7 @@
 	<properties>
 
 		<!-- Generic properties -->
-		<java.version>1.16</java.version>
+		<java.version>1.17</java.version>
 		<JavaFX.Version>17</JavaFX.Version>
 		<JavaFX.Platform>win</JavaFX.Platform>
 		<!-- <JavaFX.Platform>mac</JavaFX.Platform> -->
@@ -84,13 +84,14 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>cisc181.udel.edu</groupId>
-			<artifactId>ScrabbleJabber</artifactId>
+
+			<groupId>org.ud.edu</groupId>
+			<artifactId>LiveJabber</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>cisc181.udel.edu</groupId>
-			<artifactId>ScrabbleServer</artifactId>
+			<groupId>org.ud.edu</groupId>
+			<artifactId>LIVEServer</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

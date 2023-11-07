@@ -17,6 +17,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;
+
 import netgame.common.Client;
 import pkgGame.Game;
 import pkgGame.Player;
@@ -37,6 +38,8 @@ public class Scrabble extends Application {
 	private BorderPane ScrabblePane = null;
 
 	private Player ScrabblePlayer;
+	
+ 
 
 
 	public static void main(String[] args) {
