@@ -19,13 +19,12 @@ import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 import netgame.common.Client;
-import pkgGame.Game;
-import pkgGame.Player;
-import pkgGame.Action;
-import pkgGame.Board;
-import pkgGame.Table;
+import pkgCore.GamePlay;
+import pkgCore.Player;
+import pkgCore.Action;
+import pkgCore.Table;
 import pkgUtility.PropertyUtil;
-import pkgeNum.eAction;
+import pkgEnum.eAction;
 
 public class Scrabble extends Application {
 

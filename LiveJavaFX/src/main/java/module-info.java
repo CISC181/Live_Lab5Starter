@@ -3,9 +3,10 @@ module LiveJavaFX {
 	exports application;
 	exports application.controller;
 
-	requires ScrabbleBLL;
-//	requires ScrabbleServer;
-	requires ScrabbleJabber;
+	exports pkgMain;
+	
+	requires LiveBLL;
+	requires LiveJabber;
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;
@@ -21,6 +22,8 @@ module LiveJavaFX {
 	opens application to javafx.fxml;
 	opens application.controller to javafx.fxml;
 	
-//	opens app.controller to javafx.fxml;
+	opens pkgMain to javafx.graphics;
+	
+	
 	
 }
