@@ -3,7 +3,7 @@ package application.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import application.Scrabble;
+import application.Poker;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,7 +22,7 @@ public class ClientStartController implements Initializable {
 	@FXML
 	private TextField txtComputerName;
 
-	private Scrabble mainApp;
+	private Poker mainApp;
 
     
 	@Override
@@ -47,7 +47,7 @@ public class ClientStartController implements Initializable {
 		});
 	}
 
-	public void setMainApp(Scrabble mainApp) {
+	public void setMainApp(Poker mainApp) {
 		this.mainApp = mainApp;
 	}
 

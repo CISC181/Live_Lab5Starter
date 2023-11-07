@@ -2,5 +2,5 @@ package pkgEnum;
 
 public enum eAction {
 
-	PlayerJoinApp, PlayerLeaveApp, StartGame;
+	PlayerJoinApp, PlayerLeaveApp, StartGame, Bet, Sit, Leave, Draw;
 }

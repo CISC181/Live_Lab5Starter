@@ -5,20 +5,14 @@ import java.util.ResourceBundle;
 
 import application.Poker;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.Dragboard;
-import javafx.scene.layout.GridPane;
-import pkgEnum.eAction;
+import javafx.scene.control.Button;
 import pkgCore.Action;
-import pkgCore.GamePlay;
-import pkgCore.Player;
+import pkgCore.Table;
+import pkgEnum.eAction;
 
-public class ScrabbleController implements Initializable {
+public class PokerController implements Initializable  {
 
 	private Poker poker;
 	
@@ -26,8 +20,8 @@ public class ScrabbleController implements Initializable {
 		return poker;
 	}
 
-	public void setGame(Poker poker) {
-		this.poker = poker;
+	public void setGame(Poker _poker) {
+		this.poker = _poker;
 	}
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -35,10 +29,26 @@ public class ScrabbleController implements Initializable {
 	}
 	
 	@FXML
+	private void btnSit(ActionEvent event)
+	{
+		Button b = (Button)event.getSource();
+		
+		String btnID = b.getId();
+		
+		this.getGame().getPlayer().setPlayerPosition(btnID);
+		
+		
+		Action a = new Action(eAction.Sit, this.getGame().getPlayer(),null);
+		this.getGame().messageSend(a);
+		
+	}
+	
+	
+	@FXML
 	private void btnStartGame(ActionEvent event)
 	{
 		//Action a = new Action(eAction.StartGame, )
-		
+
 	}
 
 	@FXML
@@ -57,10 +67,12 @@ public class ScrabbleController implements Initializable {
 		
 	}
 	
-
+	public void HandleTable(Table CurrentTable)
+	{
+		//	Handle buttons for all positions
+		//	Loop around players in table, if instance of player
+		//	is me,show leave button
+		//	
+	}
 	
-//	private Image GetImage(Letter letter) {
-//		Image img = new Image(getClass().getResource("/img/" + letter.getChLetter() + ".png").toString());
-//		return img;
-//	}
 }

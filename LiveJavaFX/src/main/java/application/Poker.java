@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import application.controller.ClientStartController;
 import application.controller.GameBorderController;
+import application.controller.PokerController;
 import application.controller.ScrabbleController;
 //import app.controller.GameBorderController;
 //import app.controller.SudokuController;
@@ -26,17 +27,17 @@ import pkgCore.Table;
 import pkgUtility.PropertyUtil;
 import pkgEnum.eAction;
 
-public class Scrabble extends Application {
+public class Poker extends Application {
 
 	private static Properties props = null;
 	private GameClient gClient = null;
 	private Stage primaryStage;
 	private GameBorderController GBC = null;
-	private ScrabbleController SC = null;
+	private PokerController SC = null;
 	private BorderPane GameBorderPane = null;
-	private BorderPane ScrabblePane = null;
+	private BorderPane PokerPane = null;
 
-	private Player ScrabblePlayer;
+	private Player PokerPlayer;
 	
  
 
@@ -58,8 +59,8 @@ public class Scrabble extends Application {
 //		HandleRoot();
 	}
 
-	public Player getScrabblePlayer() {
-		return ScrabblePlayer;
+	public Player getPlayer() {
+		return this.PokerPlayer;
 	}
 
 	/**
@@ -114,19 +115,16 @@ public class Scrabble extends Application {
 		}
 	}
 
-	public void ShowScrabble() {
+	public void ShowPoker() {
 		try {
 
 			FXMLLoader loader = new FXMLLoader();
-			loader = new FXMLLoader(getClass().getResource("/Client/app/view/ScrabbleBoard.fxml"));
-			ScrabblePane = (BorderPane) loader.load();
+			loader = new FXMLLoader(getClass().getResource("/Client/app/view/ThreeCardPoker.fxml"));
+			PokerPane = (BorderPane) loader.load();
 
-			//ScrabblePane.prefHeight(500);
-			//ScrabblePane.prefWidth(500);
-			//ScrabblePane.setMinHeight(600);
-			
 
-			GameBorderPane.setCenter(ScrabblePane);
+
+			GameBorderPane.setCenter(PokerPane);
 			SC = loader.getController();
 			SC.setGame(this);
 			primaryStage.show();
@@ -142,15 +140,15 @@ public class Scrabble extends Application {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		ScrabblePlayer = new Player(strPlayerName, gClient.getID());
+		PokerPlayer = new Player(strPlayerName, gClient.getID());
 		HandleRoot();
-		ShowScrabble();
+		ShowPoker();
 		
 		//////////////////////////////////Action act = new Action(eAction.PlayerJoinApp,ScrabblePlayer, ScrabblePlayer);
 		//Action act = new Action(eAction.TableState, this.getAppPlayer());		
 		////////////////////////messageSend(act);
 		
-		System.out.println(ScrabblePlayer.getClientID());
+		System.out.println(PokerPlayer.getClientID());
 	}
 
  
@@ -216,12 +214,17 @@ public class Scrabble extends Application {
 				}
 				else if (message instanceof ArrayList)
 				{
-				}
-				else if (message instanceof Object) {
 					
 				}
 				else if (message instanceof Table) {
-
+					
+					
+				}
+				else if (message instanceof GamePlay) {
+					
+				}
+				else if (message instanceof Object) {
+					
 				}
 
 			});

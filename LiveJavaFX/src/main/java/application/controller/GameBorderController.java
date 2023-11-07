@@ -3,8 +3,7 @@ package application.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
- 
-import application.Scrabble;
+import application.Poker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +15,7 @@ import javafx.scene.control.ToggleGroup;
 
 public class GameBorderController implements Initializable  {
 
-	private Scrabble scrabble;	
+	private Poker poker;	
 	
 	@FXML
 	private MenuBar mnuMenu;
@@ -33,9 +32,9 @@ public class GameBorderController implements Initializable  {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {	
 	}
-	public void setMainApp(Scrabble scrabble)
+	public void setMainApp(Poker poker)
 	{
-		this.scrabble = scrabble;
+		this.poker = poker;
 	}
 	
 	@FXML

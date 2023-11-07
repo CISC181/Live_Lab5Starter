@@ -1,11 +1,14 @@
 package pkgCore;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class Table {
+public class Table implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	/**
 	 * @author BRG
 	 * @version Lab #3

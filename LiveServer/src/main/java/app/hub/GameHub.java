@@ -39,11 +39,46 @@ public class GameHub extends Hub {
 			HubTable = new Table("PokerTable");
 
 		if (message instanceof Action) {
+			
 			Action act = (Action) message;
-
+			Player p = act.getPlayer();
+			
+			
+			//String TableID = null;
+	
+			
 			switch (act.geteAct()) {
+			case Sit:
+				this.HubTable.AddPlayerToTable(p);
+				this.mainApp.messageSend(HubTable);
+				break;
+				
+				
+				
+				
+				
+				
+				
+			case Leave:
+				this.HubTable.RemovePlayerFromTable(p);
+				break;
+			case Draw:
+				try {
+					this.HubGame.Draw();
+				} catch (DeckException e) {
+					e.printStackTrace();
+				} catch (HandException e) {
+					e.printStackTrace();
+				}
+				
+			case Bet:
+				 p = act.getPlayer();
+				int BetAmount = (int) act.getPayload();
+				
+				break;
+			
 			case PlayerJoinApp:
-				Player p = act.getPlayer(); 
+				 p = act.getPlayer(); 
 				this.mainApp.AddPlayerToApp(p);
 								break;
 			case StartGame:

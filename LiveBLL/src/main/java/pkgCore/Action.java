@@ -8,10 +8,14 @@ public class Action implements Serializable {
 
  
 	private static final long serialVersionUID = 1L;
+	
+	
 	private eAction eAct;
 	private Player Player;
 	private Object payload;
-	public Action(eAction eAct, Object payload, Player player) {
+	
+	
+	public Action(eAction eAct,  Player player, Object payload) {
 		super();
 		this.eAct = eAct;
 		this.payload = payload;

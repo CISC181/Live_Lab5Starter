@@ -1,13 +1,16 @@
 package pkgCore;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Player {
-
+public class Player implements Serializable {
+ 
+	private static final long serialVersionUID = 1L;
+	
 	private UUID PlayerID;
 	private String PlayerName;
-	 
 	private int ClientID;
+	private String PlayerPosition;
 	
 	public Player(UUID playerID, String playerName) {
 		super();
@@ -40,6 +43,14 @@ public class Player {
 	
 	public int getClientID() {
 		return ClientID;
+	}
+
+	public String getPlayerPosition() {
+		return PlayerPosition;
+	}
+
+	public void setPlayerPosition(String playerPosition) {
+		PlayerPosition = playerPosition;
 	}
 	
 	
