@@ -30,9 +30,10 @@
                               <ButtonBar prefHeight="40.0" prefWidth="200.0">
                                  <buttons>
                                     <Button id="3" mnemonicParsing="false" onAction="#btnSit" text="Sit" />
-                                    <Button mnemonicParsing="false" text="Button" />
-                                    <Button mnemonicParsing="false" text="Button" />
-                                    <Button mnemonicParsing="false" text="Button" />
+                                    <Button mnemonicParsing="false" text="Leave" />
+                                    <Button mnemonicParsing="false" text="Bet" />
+                                    <Button mnemonicParsing="false" text="Check" />
+                                    <Button mnemonicParsing="false" text="Fold" />
                                  </buttons>
                               </ButtonBar>
                            </children>
