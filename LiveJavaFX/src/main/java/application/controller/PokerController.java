@@ -8,6 +8,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import pkgCore.Action;
 import pkgCore.Table;
 import pkgEnum.eAction;
@@ -15,6 +17,18 @@ import pkgEnum.eAction;
 public class PokerController implements Initializable  {
 
 	private Poker poker;
+	
+	
+	@FXML
+	private TextField txtRaiseAmt1;
+	
+	@FXML
+	private TextField txtBetAmt1;
+	
+	@FXML
+	private HBox HBoxPlayer1Cards;
+	
+	//TODO: Add attributes for player 2/3/4 like Player 1 (txtRaise, txtBet, PlayerCards);
 	
 	public Poker getGame() {
 		return poker;
@@ -42,6 +56,22 @@ public class PokerController implements Initializable  {
 		this.getGame().messageSend(a);
 		
 	}
+	
+	@FXML
+	private void btnLeave(ActionEvent event)
+	{
+		
+	}	
+	
+	@FXML
+	private void btnFold(ActionEvent event)
+	{
+		
+	}	
+	
+	
+	//TODO: Implement signature for btnBet, btnRaise, btnCheck
+	
 	
 	
 	@FXML
